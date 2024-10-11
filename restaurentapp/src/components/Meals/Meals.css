@@ -11,6 +11,9 @@
     border-radius: 10px;
     width: 600px;
 }
+tr {
+    border-bottom: 1px solid #ddd
+}
 
 h3{
     color: blueviolet;
@@ -26,12 +29,15 @@ h5{
 
 }
 
-li {
- 
-    border-bottom: 1px solid #ccc; 
+.dishcolumn {
+    padding: 0 20px;
+    text-align: left;
+    line-height: 1px;
 }
 
-li:last-child {
-    border-bottom: none; 
+.amountcolumn{
+   align-items: right;
+    padding-left: 240px;
+    padding-top: 0px;
 }
 

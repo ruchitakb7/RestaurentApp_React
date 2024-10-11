@@ -1,5 +1,6 @@
 import React from "react"
 import "./Meals.css"
+import Amountform from "./Amountform"
 
 const Meals=()=>{
     const DummyMeal=[{dishName:"Sushi",desc:"Finext Fish and Veggies",price:22.99},
@@ -9,21 +10,26 @@ const Meals=()=>{
 
     return(
         <div className="meals_display">
-            <ul>
-                {DummyMeal.map((meal)=>(
-                    <li>
-                        <h3>{meal.dishName}</h3>
-                        <h5>{meal.desc}</h5>
-                        <h4>${meal.price}</h4>
-                     
-                    </li>
-                    
-                ))
+            <table>
+                {
+                    DummyMeal.map((meal)=>(
+                    <tr>
+                        <td className="dishcolumn">
+                            <h3>{meal.dishName}</h3>
+                            <h5>{meal.desc}</h5>
+                            <h4>${meal.price}</h4>
+                        </td>
+                        <td className="amountcolumn">
+                         <Amountform>{meal.dishName}</Amountform>                           
+                        </td>
+                        
+                    </tr>
+                       
+                    ))
                 }
-            </ul>
+            </table>
+           
         </div>
     )
 }
-
-
 export default Meals

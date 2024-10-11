@@ -1,0 +1,15 @@
+
+
+input {
+    width:20px;
+    height:20px;
+    
+}
+
+button{
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    background-color: brown;
+    border-color: brown;
+}
