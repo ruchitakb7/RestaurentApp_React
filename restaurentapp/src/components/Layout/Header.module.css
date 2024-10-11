@@ -27,3 +27,18 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
   }
+
+  .summary{
+    width:500px;
+    height:auto;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: (-50%,-50%);
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
