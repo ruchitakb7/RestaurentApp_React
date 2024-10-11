@@ -6,14 +6,47 @@
     height: 5rem;
     background-color: #8a2b06;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
+    align-items:center;
+   
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 10;
   }
   
+  .headline {
+    width:175px;
+    height:auto;
+    background-color: pink;
+    color: white;
+    
+  }
+
+  .container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Optional: adds space between the boxes */
+    align-items:center;
+}
+
+.box1 {
+    width: 10%; /* Set widths of each box */
+    height:auto;
+    margin-left: 100px;
+  
+    text-align: center;
+ 
+    align-items:center;
+}
+   .box2 {
+   
+      width: 10%; /* Set widths of each box */
+      height:auto;
+      margin-right: 150px;
+      text-align: center;
+  
+      align-items:center;
+  }
+    
+   
+
   .main-image {
     width: 100%;
     height: 25rem;
@@ -32,9 +65,9 @@
     width:500px;
     height:auto;
     position: absolute;
-    top: 40%;
-    left: 30%;
-    transform: (-50%,-50%);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     background-color: grey;
     color: white;
     padding: 5px;
