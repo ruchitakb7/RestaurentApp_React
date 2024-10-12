@@ -15,19 +15,6 @@ tr {
     border-bottom: 1px solid #ddd
 }
 
-h3{
-    color: blueviolet;
-    font-weight: bold;
-}
-h4{
-    color: brown;
-    font-weight: bold;
-}
-h5{
-    color: rgb(175, 127, 219);
-    font-style: italic;
-
-}
 
 .dishcolumn {
     padding: 0 20px;

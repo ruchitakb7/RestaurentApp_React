@@ -15,9 +15,9 @@ const Meals=()=>{
                     DummyMeal.map((meal)=>(
                     <tr>
                         <td className="dishcolumn">
-                            <h3>{meal.dishName}</h3>
-                            <h5>{meal.desc}</h5>
-                            <h4>${meal.price}</h4>
+                            <h3 style={{color:"blueviolet",fontWeight:'bold'}}>{meal.dishName}</h3>
+                            <h5 style={{color:"rgb(125, 78, 169)",fontStyle:'italic'}}>{meal.desc}</h5>
+                            <h4 style={{color:"brown",fontWeight:'bold'}}>${meal.price}</h4>
                         </td>
                         <td className="amountcolumn">
                          <Amountform>{meal.dishName}</Amountform>                           

@@ -11,7 +11,7 @@ const Amountform=(prop)=>{
 
     return(
         <form onSubmit={amountHandler}>
-            <lable>Amount   </lable>
+            <lable style={{color:"black",fontWeight:'bold'}}>Amount   </lable>
             <input type="number"
             value={amount}></input>
             <div>
