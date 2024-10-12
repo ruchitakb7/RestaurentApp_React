@@ -2,7 +2,7 @@ import React from "react"
 import Food_header from "../../assets/Food_header.jpg"
 import classes from "./Header.module.css"
 
-const Header=()=>{
+const Header=({onCartClick})=>{
 
     return(
            <div>
@@ -12,7 +12,7 @@ const Header=()=>{
               <h1 >ReactMeals</h1>
               </div>
                <div className={classes.box2}>
-                <button>Cart</button>
+                <button onClick={onCartClick}>Cart : {0}</button>
                </div>
              </div>
              </header> 

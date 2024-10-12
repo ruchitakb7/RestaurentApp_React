@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import './CartModal.css'
 
-function Modal({ onClose }) {
+function CartModal({ onClose }) {
   return ReactDOM.createPortal(
     <div>
     <div className="modalstyle" onClick={onClose}></div>
@@ -20,17 +20,17 @@ function Modal({ onClose }) {
   );
 }
 
-function CartModal() {
-  const [isModalOpen, setIsModalOpen] = useState(true)
+// function CartModal() {
+//   const [isModalOpen, setIsModalOpen] = useState(true)
 
-  const closeModal = () =>{
-    setIsModalOpen(false)
-  } 
-  return (
-    <div >
-      {isModalOpen && <Modal onClose={closeModal} />}
-    </div>
-  );
-}
+//   const closeModal = () =>{
+//     setIsModalOpen(false)
+//   } 
+//   return (
+//     <div >
+//       {isModalOpen && <Modal onClose={closeModal} />}
+//     </div>
+//   );
+// }
 
 export default CartModal;
