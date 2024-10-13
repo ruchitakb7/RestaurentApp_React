@@ -1,5 +1,6 @@
 import React from "react"
 import Food_header from "../../assets/Food_header.jpg"
+import CartIcon from "../../assets/carticon.jpg"
 import classes from "./Header.module.css"
 
 const Header=({onCartClick})=>{
@@ -12,7 +13,9 @@ const Header=({onCartClick})=>{
               <h1 >ReactMeals</h1>
               </div>
                <div className={classes.box2}>
-                <button onClick={onCartClick}>Cart : {0}</button>
+                <img src={CartIcon} alt="" className={classes.cartimg} onClick={onCartClick}></img>
+                <p> Your Cart </p>
+                <spam className={classes.cartamount}>{3}</spam>
                </div>
              </div>
              </header> 

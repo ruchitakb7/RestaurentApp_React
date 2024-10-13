@@ -12,10 +12,9 @@ const Amountform=(prop)=>{
     return(
         <form onSubmit={amountHandler}>
             <lable style={{color:"black",fontWeight:'bold'}}>Amount   </lable>
-            <input type="number"
-            value={amount}></input>
-            <div>
-                <button type="submit">+Add</button>
+            <spam className="amountbox">{amount}</spam>
+            <div >
+                <button className="button" type="submit">+Add</button>
             </div>
         </form>
 
