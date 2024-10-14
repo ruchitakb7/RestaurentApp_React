@@ -7,7 +7,7 @@ import CartContext from "../../store/cart-context"
 const Header=({onCartClick})=>{
 
   const ctx= useContext(CartContext)
-  console.log(ctx.items)
+  
 
     return(
            <div>
@@ -19,7 +19,7 @@ const Header=({onCartClick})=>{
                <div className={classes.box2}>
                 <img src={CartIcon} alt="" className={classes.cartimg} onClick={onCartClick}></img>
                 <p> Your Cart </p>
-                <spam className={classes.cartamount}>{ctx.totalquantity}</spam>
+                <spam className={classes.cartamount}>{ctx.totalQuantity}</spam>
                </div>
              </div>
              </header> 
