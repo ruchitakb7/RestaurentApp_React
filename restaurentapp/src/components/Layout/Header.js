@@ -1,9 +1,13 @@
-import React from "react"
+import React,{useContext} from "react"
 import Food_header from "../../assets/Food_header.jpg"
 import CartIcon from "../../assets/carticon.jpg"
 import classes from "./Header.module.css"
+import CartContext from "../../store/cart-context"
 
 const Header=({onCartClick})=>{
+
+  const ctx= useContext(CartContext)
+  console.log(ctx.items)
 
     return(
            <div>
@@ -15,7 +19,7 @@ const Header=({onCartClick})=>{
                <div className={classes.box2}>
                 <img src={CartIcon} alt="" className={classes.cartimg} onClick={onCartClick}></img>
                 <p> Your Cart </p>
-                <spam className={classes.cartamount}>{3}</spam>
+                <spam className={classes.cartamount}>{ctx.totalquantity}</spam>
                </div>
              </div>
              </header> 

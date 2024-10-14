@@ -3,16 +3,15 @@ import "./Meals.css"
 import Amountform from "./Amountform"
 
 const Meals=()=>{
-    const DummyMeal=[{dishName:"Sushi",desc:"Finext Fish and Veggies",price:22.99},
-        {dishName:"Schnitzel",desc:"A Germen Speciality",price:16.50},
-        {dishName:"Barbecue Burger",desc:"American,raw,meaty",price:12.99},
-        {dishName:"Green Bowl",desc:"Healty and a green",price:16.00}]
+    const DummyMeal=[{id:1,dishName:"Sushi",desc:"Finext Fish and Veggies",price:22.99},
+        {id:2,dishName:"Schnitzel",desc:"A Germen Speciality",price:16.50},
+        {id:3,dishName:"Barbecue Burger",desc:"American,raw,meaty",price:12.99},
+        {id:4,dishName:"Green Bowl",desc:"Healty and a green",price:16.00}]
 
     return(
         <div className="meals_display">
             <table>
-                {
-                    DummyMeal.map((meal)=>(
+                { DummyMeal.map((meal)=>(
                     <tr>
                         <td className="dishcolumn">
                             <h3 style={{color:"blueviolet",fontWeight:'bold'}}>{meal.dishName}</h3>
@@ -20,11 +19,9 @@ const Meals=()=>{
                             <h4 style={{color:"brown",fontWeight:'bold'}}>${meal.price}</h4>
                         </td>
                         <td className="amountcolumn">
-                         <Amountform>{meal.dishName}</Amountform>                           
-                        </td>
-                        
+                         <Amountform>{meal}</Amountform>                           
+                        </td>     
                     </tr>
-                       
                     ))
                 }
             </table>

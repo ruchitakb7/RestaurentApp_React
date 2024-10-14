@@ -1,10 +1,12 @@
-import React, { Fragment ,useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/Layout/Header.js';
 import Meals from './components/Meals/Meals.js';
 import CartModal from './components/UI/CartModal.js';
+import CartProvider from './store/CartProvider.js';
 
-function App(prop) {
+
+function App(props) {
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -16,11 +18,11 @@ function App(prop) {
     setIsModalOpen(false)
   } 
   return (
-    <Fragment>  
+  <CartProvider>  
   <Header onCartClick={openModal}></Header>
   <Meals></Meals>
   {isModalOpen && <CartModal onClose={closeModal} />}
-  </Fragment>
+  </CartProvider>
   );
 }
 
