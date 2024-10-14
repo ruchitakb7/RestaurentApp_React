@@ -49,6 +49,39 @@
     background-color: brown;
   }
   
+  .container-cartitem{
+    justify-content: space-between;
+    display: flex;
+  
+    gap:10px;
+  }
+
+  .cartitem-list{
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 50%;
+  }
+ .qyantity-button{
+
+   margin-right: 5px;
+   margin-top: 10px;
+   justify-content: space-between;
+   gap:10px;
+   display: flex;
+   padding-top: 30px;
+   float: right;
+ }
+ .action-qyantity-button{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+ }
+ .action-qyantity-button:hover{
+  background-color: brown;
+ }
+  
 
 
 

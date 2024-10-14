@@ -18,21 +18,47 @@ const CartProvider=(props)=>{
 
     },[cartItem])
 
-
     const additemHandler=(item)=>{
-        let index=cartItem.findIndex(cart => cart.id === item.id);
-           if(index==-1)
+
+        setcartItem((prevItems)=>{
+         let updatedItem;
+        const index = prevItems.findIndex((cartItem) => cartItem.id === item.id)
+          
+          if (index===-1)
             {
-                setcartItem([...cartItem,item])
+              updatedItem=[...prevItems,item]     
+            } 
+            else
+            {
+               prevItems[index].quantity=prevItems[index].quantity+item.quantity
+               updatedItem=[...prevItems]
+                 
+            } 
+    
+          return updatedItem;
+        });
+        
+       }
+
+    const removeitemHandler=(id)=>{
+        setcartItem((prevItems)=>{
+            let updatedItem;
+
+            let index=prevItems.findIndex((item)=>item.id===id)
+            let newQuantity=prevItems[index].quantity-1
+            if(newQuantity>0)
+            {
+                prevItems[index].quantity=newQuantity
+                updatedItem=[...prevItems]
             }
             else
             {
-               cartItem[index].quantity=cartItem[index].quantity+item.quantity
-               setcartItem([...cartItem])
+                prevItems.splice(index,1)
+                updatedItem=[...prevItems]
             }
-       }
-
-    const removeitemHandler=(id)=>{}
+            return updatedItem;
+        })
+    }
 
     const cartContext={
         items:cartItem,
